@@ -93,7 +93,7 @@ def main():
     parser = ArgumentParser()
     parser.add_argument("-d", "--directory", help="Define which directory to purge", required=True, action=UniqueStore)
     parser.add_argument("-l", "--limit", help="Size limit before cleaning", required=True, action=UniqueStore, type=int)
-    parser.add_argument("-s", "--size", help="Size to clean", action=UniqueStore, type=int, default=1)
+    parser.add_argument("-s", "--size", help="Size to clean - DEFAULT 1GB", action=UniqueStore, type=int, default=1)
     parser.add_argument("-i", "--ignore", help="Files to ignore", action=UniqueStore, default='')
     # parser.add_argument("-u", "--unit", help="Unit of measurement", action=UniqueStore, choices=['BYTES','KB','MB','GB'], default='GB')
   
