@@ -25,8 +25,8 @@ Exemmple
 
 
 
-![Control panel](https://github.com/paronnax/synology-purge/blob/main/src/screenshot_1.png)
-![Task Scheduler](https://github.com/paronnax/synology-purge/blob/main/src/screenshot_2.png)  
-![Create Task](https://github.com/paronnax/synology-purge/blob/main/src/screenshot_3.png)  
-![Task General](https://github.com/paronnax/synology-purge/blob/main/src/screenshot_4.png)  
-![Task Schedule](https://github.com/paronnax/synology-purge/blob/main/src/screenshot_5.png)  
+![Control panel](src/screenshot_1.png)
+![Task Scheduler](src/screenshot_2.png)  
+![Create Task](src/screenshot_3.png)  
+![Task General](src/screenshot_4.png)  
+![Task Schedule](src/screenshot_5.png)  
