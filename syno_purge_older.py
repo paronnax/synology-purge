@@ -57,6 +57,13 @@ def get_files(folder,list_ignore):
                     break
         if bool_ignore: continue
         else:
+            if len(os.listdir(dirname)) == 0:
+                list_files.append({
+                    "filename" : dirname,
+                    "full_path": dirname,
+                    "size"     : os.stat(dirname).st_size,
+                    "mtime"    : 0, # Force deletion empty directory
+                })
             for filename in filenames:
                 list_files.append({
                     "filename" : filename,
@@ -85,7 +92,10 @@ def delete(list_files):
     for i in list_files:
         size_deleted += i["size"]
         print("\t"+i["filename"])
-        os.remove(i["full_path"]) 
+        try:
+            os.remove(i["full_path"]) 
+        except IsADirectoryError:
+            os.rmdir(i["full_path"])
     print()
     print("Volume cleaned : "+str(size_deleted/SIZE_UNIT.GB)[:5]+" GB")
 
@@ -136,7 +146,6 @@ def main():
             print("No files to delete")
         else:
             delete(list_files_to_delete)
-            pass
     else:
         print("Volume not reached")
 
